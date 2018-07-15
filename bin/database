@@ -1,0 +1,3 @@
+#!/bin/bash
+
+go run cmd/database/database.go $1 $2

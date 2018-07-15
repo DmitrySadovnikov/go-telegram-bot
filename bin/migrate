@@ -1,0 +1,3 @@
+#!/bin/bash
+
+go run cmd/database/migrator/migrate.go $1 $2

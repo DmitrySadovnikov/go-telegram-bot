@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "wait..."
+
+for file in ./*/*/*.go; do
+    echo $file
+    gofmt -w $file
+done
+
+echo "done."

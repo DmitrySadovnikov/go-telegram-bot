@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "wait..."
+
+paths=("." "app/controllers/..." "app/models/...")
+for path in "${paths[@]}"; do
+  echo $path
+  go test -i && gometalinter $path --config=.gometalinter.json
+done
+  
+echo "done."

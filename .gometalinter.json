@@ -1,0 +1,4 @@
+{
+  "Enable": ["testify", "test", "gofmt", "misspell"],
+  "Deadline": "60s"
+}
