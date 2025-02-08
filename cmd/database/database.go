@@ -1,10 +1,10 @@
 package main
 
 import (
-	"wat-r-u-doing-bot/config"
 	"fmt"
-	log "github.com/Sirupsen/logrus"
 	_ "github.com/lib/pq"
+	log "github.com/sirupsen/logrus"
+	"go-telegram-bot/config"
 	"os"
 )
 

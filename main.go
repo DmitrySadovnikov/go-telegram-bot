@@ -1,11 +1,11 @@
 package main
 
 import (
-	"wat-r-u-doing-bot/app/controllers"
+	"github.com/joho/godotenv"
+	"go-telegram-bot/app/controllers"
+	"go-telegram-bot/config"
 	"log"
 	"os"
-	"wat-r-u-doing-bot/config"
-	"github.com/joho/godotenv"
 )
 
 func init() {
@@ -18,7 +18,11 @@ func main() {
 	server := controllers.NewServer()
 
 	go func() {
-		log.Printf("Server running on port " + os.Getenv("PORT") + "...")
+		port := os.Getenv("PORT")
+		if port == "" {
+			port = "8080"
+		}
+		log.Printf("Server running on port " + port + "...")
 		err := server.Server.ListenAndServe()
 		if err != nil {
 			log.Printf("Error: %v", err)
@@ -26,5 +30,5 @@ func main() {
 	}()
 
 	server.WaitShutdown()
-	log.Printf("Server shuted down")
+	log.Printf("Server shut down")
 }

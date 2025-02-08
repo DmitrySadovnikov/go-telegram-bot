@@ -1,34 +1,34 @@
 package controllers
 
 import (
-	"wat-r-u-doing-bot/app/services"
 	"encoding/json"
+	"go-telegram-bot/app/services"
 	"net/http"
 )
 
-//{
-//  "update_id": 394352518,
-//  "message": {
-//    "message_id": 5,
-//    "from": {
-//      "id": 160589750,
-//      "is_bot": false,
-//      "first_name": "Dmitry",
-//      "last_name": "Sadovnikov",
-//      "username": "DmitrySadovnikov",
-//      "language_code": "en-RU"
-//    },
-//    "chat": {
-//      "id": 160589750,
-//      "first_name": "Dmitry",
-//      "last_name": "Sadovnikov",
-//      "username": "DmitrySadovnikov",
-//      "type": "private"
-//    },
-//    "date": 1527367962,
-//    "text": "привет"
-//  }
-//}
+//	{
+//	 "update_id": 394352518,
+//	 "message": {
+//	   "message_id": 5,
+//	   "from": {
+//	     "id": 123456789,
+//	     "is_bot": false,
+//	     "first_name": "Dmitry",
+//	     "last_name": "Sadovnikov",
+//	     "username": "DmitrySadovnikov",
+//	     "language_code": "en-RU"
+//	   },
+//	   "chat": {
+//	     "id": 123456789,
+//	     "first_name": "Dmitry",
+//	     "last_name": "Sadovnikov",
+//	     "username": "DmitrySadovnikov",
+//	     "type": "private"
+//	   },
+//	   "date": 1527367962,
+//	   "text": "hi"
+//	 }
+//	}
 type TelegramRequest struct {
 	UpdateId int `json:"update_id"`
 	Message  struct {
